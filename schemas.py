@@ -5,5 +5,3 @@ class Member(BaseModel):
   pw: str
   name: str
   color: str
-  class config:
-    orm_mode = True
