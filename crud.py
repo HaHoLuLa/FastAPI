@@ -6,7 +6,9 @@ def get_member(db: Session, id: str):
   return db.query(Member).filter(Member.id == id).first()
 
 def get_members(db: Session):
-  return db.query(Member).all()
+  db_item = db.query(Member).all()
+  # print(db_item)
+  return db_item
 
 def create_member(db: Session, member: SMember):
   db_member = Member(
